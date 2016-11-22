@@ -1,0 +1,1239 @@
+2016-11-19 15:49:07.953  INFO 20262 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 20262 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 15:49:07.954 DEBUG 20262 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 15:49:07.954  INFO 20262 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 15:49:08.267  INFO 20262 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e12b144: startup date [Sat Nov 19 15:49:08 PST 2016]; root of context hierarchy
+2016-11-19 15:49:09.501  INFO 20262 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 15:49:10.300  INFO 20262 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 15:49:10.312  INFO 20262 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 15:49:10.313  INFO 20262 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 15:49:10.392  INFO 20262 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 15:49:10.392  INFO 20262 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2125 ms
+2016-11-19 15:49:10.631  INFO 20262 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 15:49:10.632  INFO 20262 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 15:49:10.632  INFO 20262 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 15:49:10.632  INFO 20262 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 15:49:10.634  INFO 20262 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 15:49:10.634  INFO 20262 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 15:49:10.686  WARN 20262 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraConfig': Could not bind properties to CassandraConfig (prefix=cassandra, ignoreInvalidFields=false, ignoreUnknownFields=false, ignoreNestedProperties=false); nested exception is org.springframework.boot.bind.RelaxedBindingNotWritablePropertyException: Failed to bind 'cassandra.keyspace' from 'applicationConfig: [classpath:/application.yaml]' to 'keyspace' property on 'com.config.CassandraConfig$$EnhancerBySpringCGLIB$$951eca77'
+2016-11-19 15:49:10.688  INFO 20262 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 15:49:10.718  INFO 20262 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 15:49:10.725 ERROR 20262 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraConfig': Could not bind properties to CassandraConfig (prefix=cassandra, ignoreInvalidFields=false, ignoreUnknownFields=false, ignoreNestedProperties=false); nested exception is org.springframework.boot.bind.RelaxedBindingNotWritablePropertyException: Failed to bind 'cassandra.keyspace' from 'applicationConfig: [classpath:/application.yaml]' to 'keyspace' property on 'com.config.CassandraConfig$$EnhancerBySpringCGLIB$$951eca77'
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:352) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:303) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:408) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1575) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: org.springframework.boot.bind.RelaxedBindingNotWritablePropertyException: Failed to bind 'cassandra.keyspace' from 'applicationConfig: [classpath:/application.yaml]' to 'keyspace' property on 'com.config.CassandraConfig$$EnhancerBySpringCGLIB$$951eca77'
+	at org.springframework.boot.bind.RelaxedDataBinder$RelaxedBeanWrapper.setPropertyValue(RelaxedDataBinder.java:710) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.validation.DataBinder.applyPropertyValues(DataBinder.java:834) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.validation.DataBinder.doBind(DataBinder.java:730) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.bind.RelaxedDataBinder.doBind(RelaxedDataBinder.java:128) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.validation.DataBinder.bind(DataBinder.java:715) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:285) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:256) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:347) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	... 27 common frames omitted
+
+2016-11-19 15:50:56.554  INFO 20278 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 20278 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 15:50:56.555 DEBUG 20278 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 15:50:56.555  INFO 20278 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 15:50:56.866  INFO 20278 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e803098: startup date [Sat Nov 19 15:50:56 PST 2016]; root of context hierarchy
+2016-11-19 15:50:58.095  INFO 20278 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 15:50:58.869  INFO 20278 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 15:50:58.880  INFO 20278 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 15:50:58.881  INFO 20278 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 15:50:58.963  INFO 20278 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 15:50:58.963  INFO 20278 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2097 ms
+2016-11-19 15:50:59.194  INFO 20278 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 15:50:59.194  INFO 20278 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 15:50:59.195  INFO 20278 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 15:50:59.195  INFO 20278 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 15:50:59.197  INFO 20278 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 15:50:59.197  INFO 20278 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 15:50:59.281 DEBUG 20278 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 15:50:59.282 DEBUG 20278 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 15:50:59.284 DEBUG 20278 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 15:50:59.418 DEBUG 20278 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 15:50:59.576 DEBUG 20278 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 15:50:59.578  WARN 20278 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 15:50:59.659 DEBUG 20278 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 15:50:59.662 DEBUG 20278 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 15:50:59.755 DEBUG 20278 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 15:50:59.812 DEBUG 20278 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 15:50:59.814 DEBUG 20278 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 15:50:59.852 DEBUG 20278 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 15:50:59.855 DEBUG 20278 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 15:50:59.855 DEBUG 20278 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 15:50:59.862 DEBUG 20278 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 15:50:59.863 DEBUG 20278 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 15:50:59.871  WARN 20278 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 15:51:02.101  INFO 20278 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 15:51:02.119  INFO 20278 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 15:51:02.123 ERROR 20278 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:43) ~[spring-data-cassandra-1.3.0.RC1.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 15:55:43.507  INFO 20305 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 20305 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 15:55:43.513 DEBUG 20305 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 15:55:43.515  INFO 20305 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 15:55:45.221  INFO 20305 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4921bae7: startup date [Sat Nov 19 15:55:45 PST 2016]; root of context hierarchy
+2016-11-19 15:55:52.547  INFO 20305 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 15:55:56.858  INFO 20305 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 15:55:56.922  INFO 20305 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 15:55:56.929  INFO 20305 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 15:55:57.337  INFO 20305 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 15:55:57.339  INFO 20305 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12119 ms
+2016-11-19 15:55:58.516  INFO 20305 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 15:55:58.518  INFO 20305 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 15:55:58.519  INFO 20305 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 15:55:58.520  INFO 20305 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 15:55:58.528  INFO 20305 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 15:55:58.529  INFO 20305 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 15:55:58.921 DEBUG 20305 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 15:55:58.927 DEBUG 20305 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 15:55:58.932 DEBUG 20305 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 15:55:59.494 DEBUG 20305 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 15:56:00.097 DEBUG 20305 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 15:56:00.108  WARN 20305 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 15:56:00.467 DEBUG 20305 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 15:56:00.480 DEBUG 20305 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 15:56:00.919 DEBUG 20305 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 15:56:01.203 DEBUG 20305 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 15:56:01.213 DEBUG 20305 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 15:56:01.402 DEBUG 20305 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 15:56:01.416 DEBUG 20305 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 15:56:01.417 DEBUG 20305 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 15:56:01.439 DEBUG 20305 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 15:56:01.443 DEBUG 20305 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 15:56:01.496  WARN 20305 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 15:56:03.754  INFO 20305 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 15:56:03.864  INFO 20305 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 15:56:03.891 ERROR 20305 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 17:46:38.370  INFO 21292 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21292 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 17:46:38.372 DEBUG 21292 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 17:46:38.372  INFO 21292 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 17:46:38.704  INFO 21292 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@359f65c1: startup date [Sat Nov 19 17:46:38 PST 2016]; root of context hierarchy
+2016-11-19 17:46:40.098  INFO 21292 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 17:46:40.980  INFO 21292 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 17:46:40.994  INFO 21292 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 17:46:40.996  INFO 21292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 17:46:41.094  INFO 21292 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 17:46:41.094  INFO 21292 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2390 ms
+2016-11-19 17:46:41.342  INFO 21292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 17:46:41.343  INFO 21292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 17:46:41.343  INFO 21292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 17:46:41.343  INFO 21292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 17:46:41.345  INFO 21292 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 17:46:41.345  INFO 21292 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 17:46:41.443 DEBUG 21292 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 17:46:41.445 DEBUG 21292 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 17:46:41.447 DEBUG 21292 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 17:46:41.609 DEBUG 21292 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 17:46:41.796 DEBUG 21292 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 17:46:41.800  WARN 21292 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 17:46:41.910 DEBUG 21292 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 17:46:41.915 DEBUG 21292 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 17:46:42.035 DEBUG 21292 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 17:46:42.090 DEBUG 21292 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 17:46:42.092 DEBUG 21292 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 17:46:42.136 DEBUG 21292 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 17:46:42.140 DEBUG 21292 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 17:46:42.141 DEBUG 21292 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 17:46:42.147 DEBUG 21292 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 17:46:42.147 DEBUG 21292 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 17:46:42.157  WARN 21292 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 17:46:44.384  INFO 21292 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 17:46:44.403  INFO 21292 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 17:46:44.407 ERROR 21292 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 17:46:55.472  INFO 21294 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21294 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 17:46:55.473 DEBUG 21294 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 17:46:55.473  INFO 21294 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 17:46:55.756  INFO 21294 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2b71962a: startup date [Sat Nov 19 17:46:55 PST 2016]; root of context hierarchy
+2016-11-19 17:46:56.971  INFO 21294 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 17:46:57.752  INFO 21294 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 17:46:57.763  INFO 21294 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 17:46:57.764  INFO 21294 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 17:46:57.840  INFO 21294 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 17:46:57.841  INFO 21294 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2085 ms
+2016-11-19 17:46:58.075  INFO 21294 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 17:46:58.075  INFO 21294 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 17:46:58.075  INFO 21294 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 17:46:58.076  INFO 21294 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 17:46:58.077  INFO 21294 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 17:46:58.077  INFO 21294 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 17:46:58.160 DEBUG 21294 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 17:46:58.161 DEBUG 21294 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 17:46:58.162 DEBUG 21294 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 17:46:58.282 DEBUG 21294 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 17:46:58.409 DEBUG 21294 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 17:46:58.411  WARN 21294 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 17:46:58.480 DEBUG 21294 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 17:46:58.483 DEBUG 21294 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 17:46:58.571 DEBUG 21294 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 17:46:58.621 DEBUG 21294 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 17:46:58.623 DEBUG 21294 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 17:46:58.663 DEBUG 21294 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 17:46:58.667 DEBUG 21294 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 17:46:58.667 DEBUG 21294 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 17:46:58.672 DEBUG 21294 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 17:46:58.673 DEBUG 21294 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 17:46:58.681  WARN 21294 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 17:47:00.906  INFO 21294 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 17:47:00.923  INFO 21294 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 17:47:00.927 ERROR 21294 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 17:47:59.943  INFO 21311 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21311 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 17:47:59.944 DEBUG 21311 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 17:47:59.944  INFO 21311 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 17:48:00.227  INFO 21311 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73124f6: startup date [Sat Nov 19 17:48:00 PST 2016]; root of context hierarchy
+2016-11-19 17:48:01.460  INFO 21311 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 17:48:02.240  INFO 21311 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 17:48:02.252  INFO 21311 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 17:48:02.253  INFO 21311 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 17:48:02.328  INFO 21311 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 17:48:02.328  INFO 21311 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2101 ms
+2016-11-19 17:48:02.558  INFO 21311 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 17:48:02.559  INFO 21311 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 17:48:02.559  INFO 21311 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 17:48:02.559  INFO 21311 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 17:48:02.560  INFO 21311 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 17:48:02.561  INFO 21311 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 17:48:02.647 DEBUG 21311 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 17:48:02.648 DEBUG 21311 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 17:48:02.649 DEBUG 21311 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 17:48:02.775 DEBUG 21311 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 17:48:02.907 DEBUG 21311 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 17:48:02.909  WARN 21311 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 17:48:02.982 DEBUG 21311 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 17:48:02.985 DEBUG 21311 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 17:48:03.071 DEBUG 21311 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 17:48:03.123 DEBUG 21311 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 17:48:03.125 DEBUG 21311 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 17:48:03.162 DEBUG 21311 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 17:48:03.165 DEBUG 21311 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 17:48:03.166 DEBUG 21311 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 17:48:03.170 DEBUG 21311 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 17:48:03.171 DEBUG 21311 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 17:48:03.180  WARN 21311 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 17:48:05.411  INFO 21311 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 17:48:05.433  INFO 21311 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 17:48:05.437 ERROR 21311 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 17:49:14.339  INFO 21329 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21329 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 17:49:14.340 DEBUG 21329 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 17:49:14.340  INFO 21329 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 17:49:14.624  INFO 21329 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8f8d044: startup date [Sat Nov 19 17:49:14 PST 2016]; root of context hierarchy
+2016-11-19 17:49:15.852  INFO 21329 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 17:49:16.636  INFO 21329 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 17:49:16.647  INFO 21329 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 17:49:16.648  INFO 21329 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 17:49:16.723  INFO 21329 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 17:49:16.723  INFO 21329 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2099 ms
+2016-11-19 17:49:16.965  INFO 21329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 17:49:16.966  INFO 21329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 17:49:16.966  INFO 21329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 17:49:16.966  INFO 21329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 17:49:16.967  INFO 21329 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 17:49:16.968  INFO 21329 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 17:49:17.056 DEBUG 21329 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 17:49:17.058 DEBUG 21329 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 17:49:17.059 DEBUG 21329 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 17:49:17.177 DEBUG 21329 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 17:49:17.307 DEBUG 21329 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 17:49:17.309  WARN 21329 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 17:49:17.381 DEBUG 21329 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 17:49:17.384 DEBUG 21329 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 17:49:17.469 DEBUG 21329 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 17:49:17.520 DEBUG 21329 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 17:49:17.522 DEBUG 21329 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 17:49:17.561 DEBUG 21329 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 17:49:17.565 DEBUG 21329 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 17:49:17.565 DEBUG 21329 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 17:49:17.571 DEBUG 21329 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 17:49:17.572 DEBUG 21329 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 17:49:17.581  WARN 21329 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 17:49:19.809  INFO 21329 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 17:49:19.826  INFO 21329 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 17:49:19.830 ERROR 21329 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 18:08:11.223  INFO 21405 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21405 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 18:08:11.224 DEBUG 21405 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 18:08:11.224  INFO 21405 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 18:08:11.530  INFO 21405 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8f8d044: startup date [Sat Nov 19 18:08:11 PST 2016]; root of context hierarchy
+2016-11-19 18:08:12.741  INFO 21405 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 18:08:13.513  INFO 21405 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 18:08:13.524  INFO 21405 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 18:08:13.525  INFO 21405 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 18:08:13.602  INFO 21405 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 18:08:13.602  INFO 21405 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2072 ms
+2016-11-19 18:08:13.836  INFO 21405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 18:08:13.836  INFO 21405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 18:08:13.836  INFO 21405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 18:08:13.836  INFO 21405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 18:08:13.838  INFO 21405 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 18:08:13.838  INFO 21405 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 18:08:13.919 DEBUG 21405 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 18:08:13.920 DEBUG 21405 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 18:08:13.921 DEBUG 21405 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 18:08:14.037 DEBUG 21405 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 18:08:14.170 DEBUG 21405 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 18:08:14.173  WARN 21405 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 18:08:14.245 DEBUG 21405 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 18:08:14.248 DEBUG 21405 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 18:08:14.333 DEBUG 21405 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Error connecting to localhost/127.0.0.1:9042 (Connection refused: localhost/127.0.0.1:9042)
+2016-11-19 18:08:14.335 DEBUG 21405 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : Defuncting Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] because: [localhost/127.0.0.1:9042] Cannot connect
+2016-11-19 18:08:14.335 DEBUG 21405 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 18:08:14.336 DEBUG 21405 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preventing new connections for the next 1000 ms
+2016-11-19 18:08:14.336 DEBUG 21405 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] failed, remaining = 0
+2016-11-19 18:08:14.341 DEBUG 21405 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.TransportException: [localhost/127.0.0.1:9042] Cannot connect
+	at com.datastax.driver.core.Connection$1.operationComplete(Connection.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$1.operationComplete(Connection.java:145) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:680) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:603) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:563) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:424) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:274) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:296) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:528) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+Caused by: java.net.ConnectException: Connection refused: localhost/127.0.0.1:9042
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.7.0_79]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739) ~[na:1.7.0_79]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:208) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:287) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	... 6 common frames omitted
+
+2016-11-19 18:08:14.342 DEBUG 21405 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 18:08:14.350  WARN 21405 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.TransportException: [localhost/127.0.0.1:9042] Cannot connect))
+2016-11-19 18:08:16.573  INFO 21405 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 18:08:16.591  INFO 21405 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 18:08:16.595 ERROR 21405 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.TransportException: [localhost/127.0.0.1:9042] Cannot connect))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.TransportException: [localhost/127.0.0.1:9042] Cannot connect))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 18:10:38.591  INFO 21575 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21575 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 18:10:38.592 DEBUG 21575 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 18:10:38.592  INFO 21575 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 18:10:38.882  INFO 21575 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec6ca37: startup date [Sat Nov 19 18:10:38 PST 2016]; root of context hierarchy
+2016-11-19 18:10:40.076  INFO 21575 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 18:10:40.862  INFO 21575 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 18:10:40.874  INFO 21575 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 18:10:40.875  INFO 21575 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 18:10:40.951  INFO 21575 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 18:10:40.951  INFO 21575 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2069 ms
+2016-11-19 18:10:41.188  INFO 21575 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 18:10:41.189  INFO 21575 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 18:10:41.189  INFO 21575 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 18:10:41.189  INFO 21575 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 18:10:41.191  INFO 21575 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 18:10:41.191  INFO 21575 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 18:10:41.274 DEBUG 21575 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 18:10:41.275 DEBUG 21575 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 18:10:41.277 DEBUG 21575 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 18:10:41.377  INFO 21575 --- [main] com.config.CassandraConfig               : contactPoints=localhost, port=9042, keyspace=azracas
+2016-11-19 18:10:41.395 DEBUG 21575 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 18:10:41.529 DEBUG 21575 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 18:10:41.531  WARN 21575 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 18:10:41.608 DEBUG 21575 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 18:10:41.611 DEBUG 21575 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 18:10:41.694 DEBUG 21575 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 18:10:41.775 DEBUG 21575 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 18:10:41.777 DEBUG 21575 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 18:10:41.821 DEBUG 21575 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 18:10:41.828 DEBUG 21575 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 18:10:41.829 DEBUG 21575 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 18:10:41.835 DEBUG 21575 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 18:10:41.836 DEBUG 21575 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 18:10:41.845  WARN 21575 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 18:10:44.074  INFO 21575 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 18:10:44.092  INFO 21575 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 18:10:44.096 ERROR 21575 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 18:11:48.998  INFO 21591 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21591 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 18:11:48.999 DEBUG 21591 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 18:11:48.999  INFO 21591 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 18:11:49.282  INFO 21591 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@359f65c1: startup date [Sat Nov 19 18:11:49 PST 2016]; root of context hierarchy
+2016-11-19 18:11:50.495  INFO 21591 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 18:11:51.282  INFO 21591 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 18:11:51.293  INFO 21591 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 18:11:51.294  INFO 21591 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 18:11:51.370  INFO 21591 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 18:11:51.371  INFO 21591 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2089 ms
+2016-11-19 18:11:51.609  INFO 21591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 18:11:51.610  INFO 21591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 18:11:51.610  INFO 21591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 18:11:51.610  INFO 21591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 18:11:51.612  INFO 21591 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 18:11:51.612  INFO 21591 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 18:11:51.695 DEBUG 21591 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 18:11:51.697 DEBUG 21591 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 18:11:51.698 DEBUG 21591 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 18:11:51.802  INFO 21591 --- [main] com.config.CassandraConfig               : contactPoints=localhost, port=9042, keyspace=azracas
+2016-11-19 18:11:51.819 DEBUG 21591 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 18:11:51.951 DEBUG 21591 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 18:11:51.953  WARN 21591 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 18:11:52.026 DEBUG 21591 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 18:11:52.029 DEBUG 21591 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 18:11:52.117 DEBUG 21591 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 18:11:52.171 DEBUG 21591 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 18:11:52.173 DEBUG 21591 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 18:11:52.215 DEBUG 21591 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 18:11:52.220 DEBUG 21591 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 18:11:52.220 DEBUG 21591 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 18:11:52.225 DEBUG 21591 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 18:11:52.226 DEBUG 21591 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 18:11:52.234  WARN 21591 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 18:11:54.465  INFO 21591 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 18:11:54.483  INFO 21591 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 18:11:54.488 ERROR 21591 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.5.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 18:32:31.498  INFO 21661 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21661 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 18:32:31.499 DEBUG 21661 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 18:32:31.499  INFO 21661 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 18:32:31.813  INFO 21661 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51f66b36: startup date [Sat Nov 19 18:32:31 PST 2016]; root of context hierarchy
+2016-11-19 18:32:33.040  INFO 21661 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 18:32:33.824  INFO 21661 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 18:32:33.835  INFO 21661 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 18:32:33.836  INFO 21661 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 18:32:33.912  INFO 21661 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 18:32:33.913  INFO 21661 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2100 ms
+2016-11-19 18:32:34.147  INFO 21661 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 18:32:34.147  INFO 21661 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 18:32:34.147  INFO 21661 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 18:32:34.147  INFO 21661 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 18:32:34.149  INFO 21661 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 18:32:34.149  INFO 21661 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 18:32:34.229 DEBUG 21661 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 18:32:34.230 DEBUG 21661 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 18:32:34.231 DEBUG 21661 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 18:32:34.334  INFO 21661 --- [main] com.config.CassandraConfig               : contactPoints=localhost, port=9042, keyspace=azracas
+2016-11-19 18:32:34.352 DEBUG 21661 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 18:32:34.488 DEBUG 21661 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 18:32:34.490  WARN 21661 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 18:32:34.567 DEBUG 21661 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 18:32:34.570 DEBUG 21661 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 18:32:34.658 DEBUG 21661 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 18:32:34.709 DEBUG 21661 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 18:32:34.711 DEBUG 21661 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 18:32:34.750 DEBUG 21661 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 18:32:34.754 DEBUG 21661 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 18:32:34.754 DEBUG 21661 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 18:32:34.759 DEBUG 21661 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 18:32:34.760 DEBUG 21661 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 18:32:34.767  WARN 21661 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 18:32:36.999  INFO 21661 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 18:32:37.016  INFO 21661 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 18:32:37.020 ERROR 21661 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+
+2016-11-19 18:59:11.818  INFO 21749 --- [main] com.config.ApplicationCas                : Starting ApplicationCas v1.0-SNAPSHOT on LM-SJN-00875643 with PID 21749 (/Users/arabbani/Documents/spring-cassandra/project/cas-sp/target/sp.cas.azra-1.0-SNAPSHOT.jar started by arabbani in /Users/arabbani/Documents/spring-cassandra/project/cas-sp)
+2016-11-19 18:59:11.819 DEBUG 21749 --- [main] com.config.ApplicationCas                : Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-11-19 18:59:11.819  INFO 21749 --- [main] com.config.ApplicationCas                : No active profile set, falling back to default profiles: default
+2016-11-19 18:59:12.125  INFO 21749 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73d17d67: startup date [Sat Nov 19 18:59:12 PST 2016]; root of context hierarchy
+2016-11-19 18:59:13.383  INFO 21749 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'cassandraTemplate' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=cassandraConfig; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/config/CassandraConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration; factoryMethodName=cassandraTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/data/cassandra/CassandraDataAutoConfiguration.class]]
+2016-11-19 18:59:14.155  INFO 21749 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-19 18:59:14.167  INFO 21749 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-19 18:59:14.168  INFO 21749 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-19 18:59:14.244  INFO 21749 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-19 18:59:14.244  INFO 21749 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2119 ms
+2016-11-19 18:59:14.474  INFO 21749 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-19 18:59:14.475  INFO 21749 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-19 18:59:14.475  INFO 21749 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-19 18:59:14.475  INFO 21749 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-19 18:59:14.477  INFO 21749 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-11-19 18:59:14.477  INFO 21749 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-19 18:59:14.557 DEBUG 21749 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NEW_NODE_DELAY_SECONDS is undefined, using default value 1
+2016-11-19 18:59:14.558 DEBUG 21749 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NON_BLOCKING_EXECUTOR_SIZE is undefined, using default value 8
+2016-11-19 18:59:14.560 DEBUG 21749 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.NOTIF_LOCK_TIMEOUT_SECONDS is undefined, using default value 60
+2016-11-19 18:59:14.659  INFO 21749 --- [main] com.config.CassandraConfig               : contactPoints=localhost, port=9042, keyspace=azracas
+2016-11-19 18:59:14.676 DEBUG 21749 --- [main] com.datastax.driver.core.Cluster         : Starting new cluster with contact points [localhost/127.0.0.1:9042]
+2016-11-19 18:59:14.810 DEBUG 21749 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.FORCE_NIO is undefined, using default value false
+2016-11-19 18:59:14.813  WARN 21749 --- [main] com.datastax.driver.core.NettyUtil       : Found Netty's native epoll transport, but not running on linux-based operating system. Using NIO instead.
+2016-11-19 18:59:14.888 DEBUG 21749 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] preparing to open 1 new connections, total = 1
+2016-11-19 18:59:14.891 DEBUG 21749 --- [main] c.datastax.driver.core.SystemProperties  : com.datastax.driver.DISABLE_COALESCING is undefined, using default value false
+2016-11-19 18:59:14.981 DEBUG 21749 --- [cluster1-nio-worker-0] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Connection established, initializing transport
+2016-11-19 18:59:15.031 DEBUG 21749 --- [cluster1-nio-worker-0] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=false] Transport initialized, connection ready
+2016-11-19 18:59:15.033 DEBUG 21749 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing node list and token map
+2016-11-19 18:59:15.071 DEBUG 21749 --- [main] c.d.driver.core.ControlConnection        : [Control connection] Refreshing schema
+2016-11-19 18:59:15.075 DEBUG 21749 --- [main] com.datastax.driver.core.Connection      : Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closing connection
+2016-11-19 18:59:15.076 DEBUG 21749 --- [main] com.datastax.driver.core.Host.STATES     : [localhost/127.0.0.1:9042] Connection[localhost/127.0.0.1:9042-1, inFlight=0, closed=true] closed, remaining = 0
+2016-11-19 18:59:15.080 DEBUG 21749 --- [main] c.d.driver.core.ControlConnection        : [Control connection] error on localhost/127.0.0.1:9042 connection, no more host to try
+
+com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:102) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:149) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.DefaultResultSetFuture.onSet(DefaultResultSetFuture.java:167) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1009) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:932) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254) ~[netty-handler-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:242) ~[netty-codec-4.0.27.Final.jar!/:4.0.27.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116) ~[netty-all-4.0.23.Final.jar!/:4.0.23.Final]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.7.0_79]
+
+2016-11-19 18:59:15.081 DEBUG 21749 --- [main] com.datastax.driver.core.Cluster         : Shutting down
+2016-11-19 18:59:15.088  WARN 21749 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+2016-11-19 18:59:17.312  INFO 21749 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-19 18:59:17.330  INFO 21749 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-19 18:59:17.334 ERROR 21749 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'session' defined in class path resource [com/config/CassandraConfig.class]: Invocation of init method failed; nested exception is com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:735) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar!/:1.4.2.RELEASE]
+	at com.config.ApplicationCas.main(ApplicationCas.java:21) [classes!/:1.0-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_79]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:58) [sp.cas.azra-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces))
+	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1429) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.init(Cluster.java:162) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connectAsync(Cluster.java:341) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at com.datastax.driver.core.Cluster.connect(Cluster.java:286) ~[cassandra-driver-core-2.1.9.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.connect(CassandraCqlSessionFactoryBean.java:100) ~[spring-cql-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.cassandra.config.CassandraCqlSessionFactoryBean.afterPropertiesSet(CassandraCqlSessionFactoryBean.java:94) ~[spring-cql-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.data.cassandra.config.CassandraSessionFactoryBean.afterPropertiesSet(CassandraSessionFactoryBean.java:60) ~[spring-data-cassandra-1.4.4.RELEASE.jar!/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar!/:4.3.4.RELEASE]
+	... 24 common frames omitted
+

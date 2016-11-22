@@ -1,0 +1,9 @@
+logging:
+    path: logs
+    level:
+        com: DEBUG
+
+cassandra:
+    contactPoints: localhost
+    port: 9042
+    keySpace: azracas

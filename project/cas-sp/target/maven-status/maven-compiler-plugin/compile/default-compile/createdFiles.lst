@@ -1,0 +1,5 @@
+com/azracas/data/Person.class
+com/azracas/controller/PersonControlller.class
+com/config/ApplicationCas.class
+com/azracas/repo/PersonRepo.class
+com/config/CassandraConfig.class
